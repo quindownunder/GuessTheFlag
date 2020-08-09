@@ -10,7 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Button(action: {
+            print("Edit button was tapped")
+        }) {
+            HStack(spacing: 10) {
+                Image(systemName: "pencil")
+                    .renderingMode(.original)
+                Text("Edit")
+            }
+        }
     }
 }
 
